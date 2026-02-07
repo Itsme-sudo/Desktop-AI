@@ -1,0 +1,120 @@
+# Offline Python Voice AI Assistant
+
+A **fully offline, voice-controlled AI assistant** built in Python.  
+It can open applications, websites, and respond to basic voice commands — **without ChatGPT or Telegram APIs**.  
+
+---
+
+## Features
+- 🎤 Voice-controlled (offline)
+- 🖥 Open system applications: Calculator, Notepad, CMD, etc.
+- 🌐 Open websites: Google, YouTube, GitHub
+- 🗣 Offline text-to-speech responses
+- ✅ 100% local, works without internet
+
+---
+
+## Requirements
+- Python 3.8 – 3.11
+- Working microphone
+- Internet for initial library installation & model download
+
+---
+
+## Installation
+
+### 1. Create a Virtual Environment (Recommended)
+```bash
+python -m venv venv
+
+window activation :
+
+   venv\Scripts\activate
+
+mac/Linux activation:
+
+    source venv/bin/activate
+
+
+2. Upgrade pip
+python -m pip install --upgrade pip setuptools wheel
+
+3. Install Required Libraries
+pip install pyttsx3 speechrecognition vosk
+
+4. Install PyAudio (for microphone input)
+
+Windows
+
+Download .whl from: PyAudio Windows
+
+Install:
+
+pip install PyAudio-*.whl
+
+
+Linux
+
+sudo apt install portaudio19-dev python3-pyaudio
+pip install pyaudio
+
+
+macOS
+
+brew install portaudio
+pip install pyaudio
+
+5. Download Offline Vosk Model
+
+Download Vosk English Small Model from: Vosk Models
+
+Extract into your project folder as:
+
+project_folder/
+ ├── model/
+ ├── assistant.py
+
+
+⚠️ Folder name must be model
+
+6. Test Microphone
+python -m speech_recognition
+
+7. Run the Assistant
+python assistant.py
+
+Example Voice Commands
+
+"Hello"
+
+"Open Google"
+
+"Open YouTube"
+
+"Open Calculator"
+
+"Exit"
+
+Troubleshooting
+
+❌ No module named pyaudio → Install PyAudio manually as shown above
+
+❌ Mic not detected → Check system microphone permissions
+
+❌ Model error → Ensure model/ folder path exists and is correct
+
+Installed Libraries
+
+pyttsx3
+
+speechrecognition
+
+vosk
+
+pyaudio
+
+License
+
+MIT License
+Free to use, modify, and distribute.
+
